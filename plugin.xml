@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-EbizuPublisher" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ebizusdkplugin</name>
+    <description>The Ebizu SDK is a powerful plugin that you can add to your app to enable you to quickly connect and deploy campaigns from the cloud, and enrich your apps with location and proximity context.</description>
+    <keywords>Ebizu, Ebizu SDK, Ebizu Publisher, Beacond</keywords>
+    <js-module name="EbizuSDKPlugin" src="www/EbizuSDKPlugin.js">
+        <clobbers target="EbizuSDKPlugin" />
+    </js-module>
+    <js-module name="barcodescanner" src="www/barcodescanner.js">
+        <clobbers target="cordova.plugins.barcodeScanner" />
+    </js-module>
+    <dependency id="cordova-plugin-app-event" />
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="EbizuSDKPlugin">
+                <param name="ios-package" value="CDVEbizuSDKPlugin" />
+                
+            </feature>
+            <feature name="BarcodeScanner">
+                <param name="ios-package" value="CDVBarcodeScanner" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVEbizuSDKPlugin.h" />
+        <source-file src="src/ios/CDVEbizuSDKPlugin.m" />
+        <framework src="AdSupport.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="CoreBluetooth.framework" />
+        <framework src="src/ios/EbizuPublisherSDK.framework" custom="true"/>
+    </platform>
+    <hook type="after_plugin_add" src="hooks/after_plugin_add.js" />
+</plugin>

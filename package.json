@@ -1,0 +1,27 @@
+{
+  "name": "ebizusdkplugin",
+  "version": "0.0.16",
+  "description": "The Ebizu SDK is a powerful plugin that you can add to your app to enable you to quickly connect and deploy campaigns from the cloud, and enrich your apps with location and proximity context.",
+  "cordova": {
+    "id": "cordova-plugin-ebizupublisher",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://gitlab.ebizu.com/wafda/EbizuSDKionic.git"
+  },
+  "keywords": [
+    "Ebizu",
+    "Ebizu SDK",
+    "Ebizu Publisher",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Muh Reza Fajar A.",
+  "license": "Ebizu",
+  "homepage": "https://developers.ebizu.com/v1.0/docs/what-is-ebizu-sdk"
+}
